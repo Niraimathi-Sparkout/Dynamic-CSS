@@ -1,0 +1,22 @@
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^www\.example\.com$
+RewriteRule ^/?$ "http\:\/\/example\.com\/" [R=301,L]
+
+RewriteCond %{HTTP_USER_AGENT} libwww-perl.* 
+RewriteRule .* – [F,L]
+
+ErrorDocument 404 /404-error.php 
+RewriteRule ^Home/$   index.php [L]
+
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+	ExpiresByType text/css                  "access plus 1 month"
+  	ExpiresByType application/javascript    "access plus 1 month"
+  	ExpiresByType text/javascript           "access plus 1 month"
+	ExpiresByType text/js           "access plus 1 month"
+</IfModule>
