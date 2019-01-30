@@ -1,6 +1,8 @@
 # Dynamic-CSS
 This is very useful for changing template styles as per settings Dynamically.
 
+We can use this concept both core and frameworks. To differenciate admin panel theme for different clients we can use this concept well.
+
 Step 1 : Download this code and paste it into your local machine (xampp or wampp).
 
 Step 2 : Create database and import .sql file from DB folder.
